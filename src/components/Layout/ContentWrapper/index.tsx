@@ -1,21 +1,22 @@
-import React from 'react';
+import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     content: {
-        flexGrow: 1,
-        padding: theme.spacing(3),
-      },
-  })
+      flexGrow: 1,
+      padding: theme.spacing(3),
+    },
+  }),
 );
 
 interface ContentWrapper {
-    children?: React.ReactNode;
-  }
+  children?: React.ReactNode;
+}
 
-const ContentWrapper: React.FC<ContentWrapper> = props=> {
+const ContentWrapper: React.FC<ContentWrapper> = (props) => {
   const classes = useStyles();
 
   return (
@@ -24,6 +25,6 @@ const ContentWrapper: React.FC<ContentWrapper> = props=> {
       {props.children}
     </div>
   );
-}
+};
 
 export default ContentWrapper;
