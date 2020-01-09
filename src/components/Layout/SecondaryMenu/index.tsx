@@ -2,15 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import SecondaryMenuIcon from './SecondaryMenuIcon'
+import ToolBarDivider from '../ToolBarDivider'
 
 const drawerWidth = 256;
 
@@ -35,12 +29,10 @@ const useStyles = makeStyles((theme: Theme) =>
         },
       },
       toolbar: {
-        ...theme.mixins.toolbar,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        // padding: '0 px',
-        minHeight: '48 px',
+        ...theme.mixins.toolbar,
       },
       drawer: {
         width: drawerWidth,
@@ -54,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const SideDrawer: React.FC = () => {
+const SecondaryMenu: React.FC = (props) => {
     const classes = useStyles();
     
     return (
@@ -71,38 +63,12 @@ const SideDrawer: React.FC = () => {
           }}
           open={true}
         >
-            <div className={classes.toolbar} />
-
-            <Toolbar>
-                <ListItemIcon>
-                    <InboxIcon />
-                </ListItemIcon>
-                <Typography variant="h6">
-                    Kubernetes
-                </Typography>
-            </Toolbar>
-
+            <ToolBarDivider />
+            <SecondaryMenuIcon />
             <Divider />
-            <List className={classes.list}>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
+            {props.children}
         </Drawer>
     );
 }
 
-export default SideDrawer;
+export default SecondaryMenu;

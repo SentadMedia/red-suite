@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'typeface-roboto';  // TODO check 
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 
 import App from './App';
@@ -10,10 +9,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <ThemeProvider theme={theme}>
-        <div style={{display: 'flex'}}>
-            <CssBaseline />
-            <App />
-        </div>
+        <App />
     </ThemeProvider>,
     document.getElementById('root')
 );
