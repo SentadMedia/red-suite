@@ -10,8 +10,10 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <App />
+        <div style={{display: 'flex'}}>
+            <CssBaseline />
+            <App />
+        </div>
     </ThemeProvider>,
     document.getElementById('root')
 );
