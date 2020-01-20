@@ -14,25 +14,25 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     appBar: {
-      zIndex: theme.zIndex.drawer + 101,
+      zIndex: theme.zIndex.drawer + 101
     },
     toolBar: {
-      minHeight: 48,
+      minHeight: 48
     },
     menuButton: {
       marginLeft: -12,
-      marginRight: 20,
+      marginRight: 20
     },
     title: {
       display: 'none',
       [theme.breakpoints.up('sm')]: {
-        display: 'block',
-      },
+        display: 'block'
+      }
     },
     grow: {
-      flexGrow: 1,
-    },
-  }),
+      flexGrow: 1
+    }
+  })
 );
 
 const AppTopBar: React.FC = () => {
