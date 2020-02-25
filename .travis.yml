@@ -18,12 +18,11 @@ jobs:
         - CI=true
       script:
         - yarn
-        - yarn test --passWithNoTests
-    - script: yarn test --coverage --passWithNoTests
+        - yarn test
+    - script: yarn test --coverage
       name: 'Coverage Report'
       before_script:
-        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-        - chmod +x ./cc-test-reporter
-        - ./cc-test-reporter before-build
+        - touch .coveralls.yml
+        - echo "repo_token: uhk77XiXtPe7mX5DbCER5DT27bWLK9hcM" > .coveralls.yml
       after_script:
-        - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+        - cat coverage/lcov.info | coveralls

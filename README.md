@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/SentadMedia/red-suite.svg?branch=master)](https://travis-ci.org/SentadMedia/red-suite)
+[![Coverage Status](https://coveralls.io/repos/github/SentadMedia/red-suite/badge.svg?branch=master)](https://coveralls.io/github/SentadMedia/red-suite?branch=master)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
