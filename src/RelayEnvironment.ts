@@ -10,7 +10,8 @@ const store = new Store(new RecordSource());
 const network = new RelayNetworkLayer(
   [
     urlMiddleware({
-      url: () => Promise.resolve('http://localhost:8080/query')
+      url: () =>
+        Promise.resolve(process.env['REACT_APP_GRAPHQL_API_BASE_URL'] || '')
     }),
     next => async req => {
       req.fetchOpts.credentials = 'include';
