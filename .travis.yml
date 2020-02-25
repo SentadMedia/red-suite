@@ -1,3 +1,10 @@
-language: node_js
-node_js:
-  - 7
+services:
+  - docker
+
+jobs:
+include:
+    - stage: "Tests"
+    name: "Unit Tests"
+    script: docker build -t test-frontend -f frontend/Dockerfile-test frontend
+    script: docker run test-frontend
+   
