@@ -24,4 +24,5 @@ jobs:
       before_script:
         - echo "repo_token:uhk77XiXtPe7mX5DbCER5DT27bWLK9hcM" > .coveralls.yml
       after_script:
+        - cat .coveralls.yml
         - cat coverage/lcov.info | coveralls
