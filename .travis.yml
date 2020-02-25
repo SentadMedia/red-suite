@@ -1,11 +1,19 @@
 language: node_js
-services:
+
+node_js:
+  - stable
+
+  services:
   - docker
 
-jobs:
-include:
-    - stage: "Tests"
-    name: "Unit Tests"
-    script: docker build -t test-frontend -f frontend/Dockerfile-test frontend
-    script: docker run test-frontend
-   
+  cache:
+  directories:
+    - node_modules
+
+    jobs:
+  include:
+    - stage: Tests
+      name: Unit Tests
+      script:
+        - docker build -t test-frontend -f frontend/Dockerfile-test frontend
+        - docker run test-frontend
