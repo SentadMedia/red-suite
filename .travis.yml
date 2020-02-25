@@ -14,6 +14,8 @@ jobs:
   include:
     - stage: Tests
       name: Unit Tests
+      env:
+        - CI=true
       script:
-        - docker build -t test-frontend -f frontend/Dockerfile-test frontend
-        - docker run test-frontend
+        - yarn
+        - yarn test --passWithNoTests
