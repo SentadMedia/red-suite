@@ -3,14 +3,14 @@ language: node_js
 node_js:
   - stable
 
-  services:
+services:
   - docker
 
-  cache:
+cache:
   directories:
     - node_modules
 
-    jobs:
+jobs:
   include:
     - stage: Tests
       name: Unit Tests
