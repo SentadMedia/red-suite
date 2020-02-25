@@ -22,7 +22,6 @@ jobs:
     - script: yarn test --coverage
       name: 'Coverage Report'
       before_script:
-        - touch .coveralls.yml
-        - echo "repo_token: uhk77XiXtPe7mX5DbCER5DT27bWLK9hcM" > .coveralls.yml
+        - echo "repo_token:uhk77XiXtPe7mX5DbCER5DT27bWLK9hcM" > .coveralls.yml
       after_script:
         - cat coverage/lcov.info | coveralls
