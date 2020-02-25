@@ -1,0 +1,8 @@
+type Mutation {
+  createAccount: Boolean
+  signIn(username: String!, password: String!): Int
+}
+
+type Query {
+  hello: String
+}

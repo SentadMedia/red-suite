@@ -1,6 +1,6 @@
 import { History } from 'history';
-import { UIFactory } from './component/UIFactory';
-import configureStore from './component/Store';
+import { UIFactory } from './UIFactory';
+import configureStore from './Store';
 import { createBrowserHistory } from 'history';
 
 export function initReduxStore(history: History<any>) {
