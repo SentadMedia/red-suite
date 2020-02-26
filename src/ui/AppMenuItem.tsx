@@ -5,12 +5,13 @@ import {
   ListItemIcon,
   ListItemText
 } from '@material-ui/core';
-import { NavLink, NavLinkProps } from 'react-router-dom';
 
 import IconExpandLess from '@material-ui/icons/ExpandLess';
 import IconExpandMore from '@material-ui/icons/ExpandMore';
-import { Omit } from '@material-ui/types';
+// import { Omit } from '@material-ui/types';
 import React from 'react';
+// import { NavLink, NavLinkProps } from 'react-router-dom';
+
 
 interface AppMenuItemProps {
   name: String;
@@ -20,7 +21,7 @@ interface AppMenuItemProps {
 }
 
 const AppMenuItem: React.FC<AppMenuItemProps> = (props: AppMenuItemProps) => {
-  const { name, Icon, items = [], link } = props;
+  const { name, Icon, items = [] } = props;
   const isExpandable = items && items.length > 0;
   const [open, setOpen] = React.useState(false);
 
@@ -30,13 +31,13 @@ const AppMenuItem: React.FC<AppMenuItemProps> = (props: AppMenuItemProps) => {
 
   //   React.forwardRef<HTMLAnchorElement, Omit<NavLinkProps, 'innerRef' | 'to'>>(
   //   (itemProps, ref) => (
-  const AdapterLink = React.forwardRef<
-    HTMLAnchorElement,
-    Omit<NavLinkProps, 'innerRef' | 'to'>
-  >((props, ref) => <NavLink innerRef={ref as any} {...props} />);
+  // const AdapterLink = React.forwardRef<
+  //   HTMLAnchorElement,
+  //   Omit<NavLinkProps, 'innerRef' | 'to'>
+  // >((props, ref) => <NavLink innerRef={ref as any} {...props} />);
 
   const MenuItemRoot = (
-    <ListItem button onClick={handleClick} component={AdapterLink} to={link}>
+    <ListItem button onClick={handleClick}>
       {/* Display an icon if any */}
       {!!Icon && (
         <ListItemIcon>

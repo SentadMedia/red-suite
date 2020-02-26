@@ -9,7 +9,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import Router from './Router';
 import { Theme } from './ui';
 
-interface AppProps {
+export interface AppProps {
   history: History<any>;
   store: any;
   classes: any;

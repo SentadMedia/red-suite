@@ -1,9 +1,6 @@
 // import 'regenerator-runtime/runtime';
 import { Environment, RecordSource, Store } from 'relay-runtime';
-import {
-  RelayNetworkLayer,
-  urlMiddleware
-} from 'react-relay-network-modern/es';
+import { RelayNetworkLayer, urlMiddleware } from 'react-relay-network-modern';
 
 const store = new Store(new RecordSource());
 
