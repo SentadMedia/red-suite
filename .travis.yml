@@ -18,10 +18,9 @@ jobs:
   include:
     - stage: 'Tests'
       name: 'Unit Tests'
-      env:
-        - CI=true
       script:
         - yarn
+        - yarn relay
         - yarn test
     - script: yarn test --coverage
       name: 'Coverage Report'
