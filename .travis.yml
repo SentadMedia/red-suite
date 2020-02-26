@@ -24,5 +24,7 @@ jobs:
         - yarn test
     - script: yarn test --coverage
       name: 'Coverage Report'
+      before_script:
+        - yarn relay
       after_script:
         - cat coverage/lcov.info | coveralls
