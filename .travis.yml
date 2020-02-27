@@ -21,13 +21,10 @@ jobs:
   include:
     - stage: 'Tests'
       name: 'Unit Tests'
-      script:
+      before_script:
         - yarn
         - yarn relay
-        - yarn test
-    - script: yarn test --coverage
-      name: 'Coverage Report'
-      before_script:
-        - yarn relay
+      script:
+        - yarn test --coverage
       after_script:
         - cat coverage/lcov.info | coveralls
