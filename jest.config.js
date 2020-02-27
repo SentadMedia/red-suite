@@ -7,7 +7,7 @@ module.exports = {
     '!src/index.tsx',
     '!src/App.tsx',
     '!src/dep.tsx',
-    '!src/serviceWorker.ts'
+    '!src/serviceWorker.ts',
     '!src/Config/**/*'
   ],
   setupFiles: ['react-app-polyfill/jsdom'],
