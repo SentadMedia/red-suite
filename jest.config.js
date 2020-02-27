@@ -1,15 +1,15 @@
 module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/setupTests.js',
-    '!src/index.tsx',
-    '!src/App.tsx',
-    '!src/dep.tsx',
-    '!src/serviceWorker.ts',
+    '!src/__generated__/**/*',
     '!src/Config/**/*',
-    '!src/__generated__/**/*'
+    '!src/App.tsx',
+    '!src/index.tsx',
+    '!src/**/*.d.ts',
+    '!src/serviceWorker.ts',
+    '!src/setupTests.js',
+    '!src/**/*.ts{x}',
+    'src/**/*.{js,jsx,ts,tsx}'
   ],
   setupFiles: ['react-app-polyfill/jsdom'],
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
