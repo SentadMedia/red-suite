@@ -3,7 +3,7 @@ import { QueryRenderer, graphql } from 'react-relay';
 import LoadingPage from '../pages/LoadingPage';
 import React from 'react';
 import { Subtract } from 'utility-types';
-import environment from '../RelayEnvironment';
+import { relayEnvironment } from 'Config';
 
 interface currentUserProps {
   currentUser: any;
@@ -27,7 +27,7 @@ export default function withCurrentUser<T extends currentUserProps>(
     render() {
       return (
         <QueryRenderer
-          environment={environment}
+          environment={relayEnvironment}
           variables={{}}
           query={query}
           render={({ error, props }: currentUserQueryResponse) => {

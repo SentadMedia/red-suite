@@ -1,8 +1,21 @@
 {
   "name": "red-suite",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://short-d.com",
+  "private": false,
+  "homepage": "https://sentad.com",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "sh -ac '. .env.${REACT_APP_ENV}; node scripts/build.js",
+    "build:development": "REACT_APP_ENV=development yarn build",
+    "build:staging": "REACT_APP_ENV=staging yarn build",
+    "build:production": "REACT_APP_ENV=production yarn build",
+    "test": "node scripts/test.js",
+    "tslint:lint": "yarn tslint -c tslint.json 'src/**/*.t{s,sx}'",
+    "prettier:base": "prettier --parser typescript --single-quote",
+    "prettier:check": "yarn prettier:base --list-different \"src/**/*.{ts,tsx}\"",
+    "prettier:write": "yarn prettier:base --write \"src/**/*.{ts,tsx}\"",
+    "relay": "relay-compiler --src ./src --schema ./data/schema.graphql --language typescript --artifactDirectory ./src/__generated__"
+  },
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",
@@ -102,9 +115,7 @@
     "webpack": "4.41.5",
     "webpack-dev-server": "3.10.2",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1"
-  },
-  "devDependencies": {
+    "workbox-webpack-plugin": "4.3.1",
     "@types/classnames": "^2.2.9",
     "@types/jest": "^24.0.25",
     "@types/lodash.flowright": "^3.5.6",
@@ -128,22 +139,6 @@
     "tslint-plugin-prettier": "^2.1.0",
     "typescript": "~3.7.2"
   },
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "sh -ac '. .env.${REACT_APP_ENV}; node scripts/build.js",
-    "build:development": "REACT_APP_ENV=development yarn build",
-    "build:staging": "REACT_APP_ENV=staging yarn build",
-    "build:production": "REACT_APP_ENV=production yarn build",
-    "test": "node scripts/test.js",
-    "tslint:lint": "yarn tslint -c tslint.json 'src/**/*.t{s,sx}'",
-    "prettier:base": "prettier --parser typescript --single-quote",
-    "prettier:check": "yarn prettier:base --list-different \"src/**/*.{ts,tsx}\"",
-    "prettier:write": "yarn prettier:base --write \"src/**/*.{ts,tsx}\"",
-    "relay": "relay-compiler --src ./src --schema ./data/schema.graphql --language typescript --artifactDirectory ./src/__generated__"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -154,70 +149,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts",
-      "!src/setupTests.js"
-    ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.ts"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jest-environment-jsdom-fourteen",
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "modulePaths": [],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ]
-  },
-  "babel": {
-    "plugins": [
-      [
-        "relay",
-        {
-          "artifactDirectory": "./src/__generated__"
-        }
-      ]
-    ],
-    "presets": [
-      "react-app"
     ]
   }
 }

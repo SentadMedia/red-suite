@@ -1,7 +1,7 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 
 import { History } from 'history';
-import createRootReducer from './RootReducer';
+import { createRootReducer } from 'Config';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import { routerMiddleware } from 'connected-react-router';
 import thunkMiddleware from 'redux-thunk';
@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-function configureStoreProd(history: History<any>) {
+async function configureStoreProd(history: History<any>) {
   const reactRouterMiddleware = routerMiddleware(history);
   const rootReducer = createRootReducer(history);
 
@@ -24,7 +24,7 @@ function configureStoreProd(history: History<any>) {
   return store;
 }
 
-function configureStoreDev(history: History<any>) {
+async function configureStoreDev(history: History<any>) {
   const reactRouterMiddleware = routerMiddleware(history);
   const rootReducer = createRootReducer(history);
 
@@ -53,8 +53,8 @@ function configureStoreDev(history: History<any>) {
   return store;
 }
 
-export default (history: History<any>) => {
+export default async (history: History<any>) => {
   return process.env.NODE_ENV === 'production'
-    ? configureStoreProd(history)
-    : configureStoreDev(history);
+    ? await configureStoreProd(history)
+    : await configureStoreDev(history);
 };

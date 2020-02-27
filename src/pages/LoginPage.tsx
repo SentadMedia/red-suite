@@ -13,8 +13,8 @@ import Paper from '@material-ui/core/Paper';
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import environment from '../RelayEnvironment';
 import { makeStyles } from '@material-ui/core/styles';
+import { relayEnvironment } from 'Config';
 
 const useStyles = makeStyles(theme => ({
   image: {
@@ -80,7 +80,7 @@ export const LoginPage: React.FC<{}> = () => {
             initialValues={initialValues}
             onSubmit={(values, actions) => {
               actions.setSubmitting(true);
-              commitMutation(environment, {
+              commitMutation(relayEnvironment, {
                 mutation,
                 variables: {
                   username: values.username,

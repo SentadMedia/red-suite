@@ -14,6 +14,9 @@ env:
   global:
     secure: 'kIR+vz5Td5oMAAH8F0cr7Np+D5JDVKXO37NDPIwke1ncEHSJ6lb6KZK521at+zH5wQ7yiBHvdpKAGYnAR56NNcnZaBBVx0ItBlAcpT1q/JYaklVPYlsbdbVbMugnGh+iw0HmPKttfu+fbzu0kV3vuvT4FJ4v9njm4XVzrYpgDkrMJghYx7G1ZioibvJivGup+lcjqymwG3CdvO2sSm/QwWtbcIlW3fekvzYDjjsFG2URLJHzCL0JndCVOor8Fg8xiEEND9iDlRSyM0eowWFf5T94oVPn+1VAK8ugAEQgqSFjb3yDiYdLktAyHRwP3b4oTBfN9921o+24xFhrthdqU+ULfFZarSBl906Ky1pLLHnNrYIVTBwqyvpquMyCEcf+rcn9GjeQask4vpYZ3UpXrkL/E3lX0r0zEzNTAq7SSVuGbkiHe5TsqMTCga5iD9NwirfmkrrdSbpFk4Kf3N0mZroPS93lmjJDbVRLJnZ6f0owhUHWXaZy6GYBpWpX1Xaic85T4oh0vzcSncZ99IU/PPQhRIdgIOWkD0nzNNAlVjY9LcIStFFcj7dCK6Js4zhlvIOyJB1oKQVJDfhSRT/tO/DINLPwFDPv9UZ9Q1bjce/zNSE5tpZcayW3IeRSlOY3jZ+xTKpk/o9vCKWb+uivy9yq3mqhQJ/UZNfOGLU43O8='
 
+notifications:
+  email: false
+
 jobs:
   include:
     - stage: 'Tests'
