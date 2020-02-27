@@ -8,7 +8,8 @@ module.exports = {
     '!src/App.tsx',
     '!src/dep.tsx',
     '!src/serviceWorker.ts',
-    '!src/Config/**/*'
+    '!src/Config/**/*',
+    '!src/__generated__/**/*'
   ],
   setupFiles: ['react-app-polyfill/jsdom'],
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
