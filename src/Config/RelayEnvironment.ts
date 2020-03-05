@@ -1,6 +1,10 @@
 // import 'regenerator-runtime/runtime';
 import { Environment, RecordSource, Store } from 'relay-runtime';
-import { RelayNetworkLayer, urlMiddleware } from 'react-relay-network-modern';
+import {
+  RelayNetworkLayer,
+  perfMiddleware,
+  urlMiddleware
+} from 'react-relay-network-modern';
 
 const store = new Store(new RecordSource());
 
@@ -10,15 +14,15 @@ const network = new RelayNetworkLayer(
       url: () =>
         Promise.resolve(process.env['REACT_APP_GRAPHQL_API_BASE_URL'] || '')
     }),
+    // process.env['NODE_ENV'] === 'development' ? loggerMiddleware() : null,
+    // process.env['NODE_ENV'] === 'development' ? errorMiddleware() : null,
+    process.env['NODE_ENV'] === 'development' ? perfMiddleware() : null,
     next => async req => {
       req.fetchOpts.credentials = 'include';
-      console.log('RelayRequest: ', req);
-      const res = await next(req);
-      console.log('RelayResponse: ', res);
-      return res;
+      return await next(req);
     }
   ],
-  { noThrow: true }
+  { noThrow: false }
 );
 
 const env = new Environment({ network, store });

@@ -4,5 +4,5 @@ type Mutation {
 }
 
 type Query {
-  hello: String
+  currentUser: String
 }

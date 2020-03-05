@@ -1,4 +1,5 @@
-import AuthRoutes from './AuthRoutes';
-import ProtectedRoutes from './ProtectedRoutes';
+import AuthRoutes from 'Routes/AuthRoutes';
+import ProtectedRoutes from 'Routes/ProtectedRoutes';
+import Routes from 'Routes/Routes';
 
-export { AuthRoutes, ProtectedRoutes };
+export { AuthRoutes, ProtectedRoutes, Routes };

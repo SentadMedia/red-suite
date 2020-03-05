@@ -6,7 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { History } from 'history';
 import { Provider as ReduxProvider } from 'react-redux';
-import Router from 'Router';
+import { Routes } from 'Routes';
+// import Router from 'Router';
 import { Theme } from './ui';
 
 export interface AppProps {
@@ -25,7 +26,7 @@ class App extends Component<AppProps> {
           <ThemeProvider theme={Theme}>
             <Grid container component="main" className={classes.root}>
               <CssBaseline />
-              <Router />
+              <Routes />
             </Grid>
           </ThemeProvider>
         </ConnectedRouter>
@@ -33,5 +34,5 @@ class App extends Component<AppProps> {
     );
   };
 }
-// const styles = { root: { display: 'flex', height: '100vh' } };
+
 export default withStyles({ root: { display: 'flex', height: '100vh' } })(App);
