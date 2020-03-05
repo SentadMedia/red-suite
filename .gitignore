@@ -26,3 +26,4 @@ src/__generated__
 
 .vscode/
 .yarnclean
+stc/**/__snapshots__
