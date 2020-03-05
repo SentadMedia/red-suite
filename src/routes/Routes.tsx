@@ -2,7 +2,7 @@ import { AuthRoutes, ProtectedRoutes } from 'Routes';
 import React, { Component } from 'react';
 
 import { ConnectedApp } from 'ui';
-import LoadingPage from 'pages/LoadingPage';
+import { LoadingPage } from 'Pages';
 import { QueryRenderer } from 'react-relay';
 import currentUserQuery from 'Routes/gql/queries/currentUser';
 import { relayEnvironment } from 'Config';
@@ -28,7 +28,8 @@ export default class NewRouter extends Component<{}> {
               return <AuthRoutes />;
             } else {
               console.error(error); // TODO dispatch server error
-              return <div>505 ERROR</div>;
+              return <AuthRoutes />;
+              // return <div>505 ERROR</div>;
             }
           }
           if (!props) {

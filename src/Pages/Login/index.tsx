@@ -58,7 +58,7 @@ const mutation = graphql`
   }
 `;
 
-export const LoginPage: React.FC<{}> = () => {
+const LoginPage: React.FC<{}> = () => {
   const classes = useStyles();
   const initialValues: MyFormValues = {
     username: 'mgh.soufiane@gmail.com',
@@ -194,3 +194,5 @@ export const LoginPage: React.FC<{}> = () => {
     </React.Fragment>
   );
 };
+
+export default LoginPage;

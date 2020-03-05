@@ -3,7 +3,7 @@ import 'typeface-roboto';
 import * as serviceWorker from './serviceWorker';
 
 import App from 'App';
-import { LoadingPage } from 'pages/LoadingPage';
+import { LoadingPage } from 'Pages/LoadingPage';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { configureStore } from 'Config';
