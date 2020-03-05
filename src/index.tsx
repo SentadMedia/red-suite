@@ -6,15 +6,11 @@ import App from 'App';
 import { LoadingPage } from 'Pages/LoadingPage';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Theme from 'ui/Theme';
 import { configureStore } from 'Config';
 import { createBrowserHistory } from 'history';
 
-// import { initUIFactory } from './dep';
-
-ReactDOM.render(
-  <LoadingPage theme={{ palette: { primary: { main: '#24292e' } } }} />,
-  document.getElementById('root')
-);
+ReactDOM.render(<LoadingPage theme={Theme} />, document.getElementById('root'));
 
 async function initUIFactory(): Promise<any> {
   let browserHistory;

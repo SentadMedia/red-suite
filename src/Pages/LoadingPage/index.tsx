@@ -1,10 +1,11 @@
+import { Theme, withTheme } from '@material-ui/core/styles';
+
 import Grid from '@material-ui/core/Grid';
 import React from 'react';
 import Spinner from 'react-spinkit';
-import { withTheme } from '@material-ui/core/styles';
 
 export interface LoadingPageProps {
-  theme: any;
+  theme: Theme;
 }
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({ theme }) => {
@@ -16,7 +17,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({ theme }) => {
       alignItems="center"
       justify="center"
       style={{ minHeight: '100vh' }}
-      data-test="Souf"
+      data-test="wrapperGrid"
     >
       <Grid item xs={3} data-test="innerGrid">
         <Spinner
