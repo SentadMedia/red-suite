@@ -1,5 +1,6 @@
-import { AppBar, AppMenu, WrapperWithMenu } from './';
+import { AppMenu, WrapperWithMenu } from './';
 
+import { AppBar } from 'ui/Header';
 import Menu from './Menu';
 import React from 'react';
 

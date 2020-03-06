@@ -25,6 +25,4 @@ jobs:
         - yarn
         - yarn relay
       script:
-        - yarn test --coverage --updateSnapshot
-      after_script:
-        - cat coverage/lcov.info | coveralls
+        - yarn test --coverage --updateSnapshot && cat coverage/lcov.info | coveralls

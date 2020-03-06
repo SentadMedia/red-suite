@@ -28,12 +28,21 @@ export default class NewRouter extends Component<{}> {
               return <AuthRoutes />;
             } else {
               console.error(error); // TODO dispatch server error
-              return <AuthRoutes />;
+              return (
+                <ConnectedApp>
+                  <ProtectedRoutes />
+                </ConnectedApp>
+              );
               // return <div>505 ERROR</div>;
             }
           }
           if (!props) {
-            return <LoadingPage />;
+            // return <LoadingPage />;
+            return (
+              <ConnectedApp>
+                <ProtectedRoutes />
+              </ConnectedApp>
+            );
           }
           return (
             <ConnectedApp>
