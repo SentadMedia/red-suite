@@ -7,7 +7,6 @@ import Grid from '@material-ui/core/Grid';
 import { History } from 'history';
 import { Provider as ReduxProvider } from 'react-redux';
 import { Routes } from 'Routes';
-// import Router from 'Router';
 import { Theme } from './ui';
 
 export interface AppProps {

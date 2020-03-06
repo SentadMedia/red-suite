@@ -17,7 +17,6 @@ const setUp = (
   shallow(
     <ToggleMenuIcon
       menuOpen={menuOpen}
-      classes={{ menuButton: '' }}
       openMenu={openMenu}
       closeMenu={closeMenu}
     />
@@ -78,6 +77,10 @@ describe('ToggleMenuIcon', () => {
 
       connectedToggleMenuIcon = wrapper.find(ToggleMenuIcon);
       icon = connectedToggleMenuIcon.find(IconButton).at(0);
+    });
+
+    it('Should render without errors', () => {
+      expect(wrapper).toMatchSnapshot();
     });
 
     it('should start with the menu closed', () => {
