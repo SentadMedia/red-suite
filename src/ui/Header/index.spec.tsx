@@ -1,8 +1,8 @@
 import AppBar from '@material-ui/core/AppBar';
-import Header from 'UI/Header';
-import HeaderLogo from 'UI/Header/HeaderLogo';
+import Header from '.';
+import HeaderLogo from './HeaderLogo';
 import React from 'react';
-import ToggleMenuIcon from 'UI/Header/ToggleMenuIcon';
+import ToggleMenuIcon from './ToggleMenuIcon';
 import Toolbar from '@material-ui/core/Toolbar';
 import { shallow } from 'enzyme';
 

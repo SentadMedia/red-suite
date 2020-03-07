@@ -1,4 +1,4 @@
-import ConnectedMenuWrapper, { MenuWrapper } from 'UI/Menu/MenuWrapper';
+import ConnectedMenuWrapper, { MenuWrapper } from '.';
 import { mount, shallow } from 'enzyme';
 
 import Drawer from '@material-ui/core/Drawer';

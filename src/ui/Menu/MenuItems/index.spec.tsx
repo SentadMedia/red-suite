@@ -1,6 +1,6 @@
-import MenuItems, { Items } from 'UI/Menu/MenuItems';
+import MenuItems, { Items } from '.';
 
-import AppMenuItem from 'UI/Menu/MenuItem';
+import AppMenuItem from '../MenuItem';
 import List from '@material-ui/core/List';
 import React from 'react';
 import { shallow } from 'enzyme';

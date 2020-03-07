@@ -1,6 +1,6 @@
-import Menu from 'UI/Menu';
-import MenuItems from 'UI/Menu/MenuItems';
-import MenuWrapper from 'UI/Menu/MenuWrapper';
+import Menu from '.';
+import MenuItems from './MenuItems';
+import MenuWrapper from './MenuWrapper';
 import React from 'react';
 import { shallow } from 'enzyme';
 

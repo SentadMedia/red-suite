@@ -1,6 +1,6 @@
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import React from 'react';
-import SecondaryMenuIcon from 'UI/SecondaryMenu/SecondaryMenuIcon';
+import SecondaryMenuIcon from '.';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { shallow } from 'enzyme';
