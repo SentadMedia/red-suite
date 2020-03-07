@@ -1,18 +1,18 @@
-import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
 import Drawer from '@material-ui/core/Drawer';
 import React from 'react';
-import ToolBarDivider from './ToolBarDivider';
+import { ToolBarDivider } from 'UI/Shared';
 import { connect } from 'react-redux';
 
-interface MenuProps {
+interface MenuWrapperProps {
   menuOpen: boolean;
   closeMenu: any;
 }
 
 const drawerWidth = 292;
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(
   createStyles({
     drawer: {
       width: drawerWidth,
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const AppMenu: React.FC<MenuProps> = props => {
+export const MenuWrapper: React.FC<MenuWrapperProps> = props => {
   const classes = useStyles();
   const { menuOpen, closeMenu } = props;
 
@@ -54,4 +54,4 @@ const mapDispatchToProps = (dispatch: any) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppMenu);
+export default connect(mapStateToProps, mapDispatchToProps)(MenuWrapper);

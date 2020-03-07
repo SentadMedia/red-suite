@@ -10,8 +10,8 @@ import IconExpandLess from '@material-ui/icons/ExpandLess';
 import IconExpandMore from '@material-ui/icons/ExpandMore';
 // import { Omit } from '@material-ui/types';
 import React from 'react';
-// import { NavLink, NavLinkProps } from 'react-router-dom';
 
+// import { NavLink, NavLinkProps } from 'react-router-dom';
 
 interface AppMenuItemProps {
   name: String;

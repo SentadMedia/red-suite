@@ -4,7 +4,7 @@ import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import React from 'react';
 import SecondaryMenuIcon from './SecondaryMenuIcon';
-import ToolBarDivider from './ToolBarDivider';
+import { ToolBarDivider } from 'UI/Shared';
 import classNames from 'classnames';
 
 const drawerWidth = 256;

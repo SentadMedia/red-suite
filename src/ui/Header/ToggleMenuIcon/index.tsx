@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   }
 });
 
-export interface ToggleMenuIconProps {
+interface ToggleMenuIconProps {
   menuOpen: boolean;
   openMenu: any;
   closeMenu: any;
@@ -35,13 +35,13 @@ export const ToggleMenuIcon: React.FC<ToggleMenuIconProps> = ({
   );
 };
 
-export const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: any) => {
   return {
     menuOpen: state.app.menuOpen
   };
 };
 
-export const mapDispatchToProps = (dispatch: Function) => {
+const mapDispatchToProps = (dispatch: Function) => {
   return {
     openMenu: () => dispatch({ type: 'APP_MENU_OPEN' }),
     closeMenu: () => dispatch({ type: 'APP_MENU_CLOSE' })

@@ -1,17 +1,13 @@
-import AppMenu from './AppMenu';
-import ConnectedApp from './ConnectedApp';
-import ContentWrapper from './ContentWrapper';
-import SecondaryMenu from './SecondaryMenu';
-import Theme from './Theme';
-import ToolBarDivider from './ToolBarDivider';
-import WrapperWithMenu from './WrapperWithMenu';
+import { PageWrapper, Theme } from 'UI/Shared';
 
-export {
-  AppMenu,
-  SecondaryMenu,
-  ToolBarDivider,
-  ContentWrapper,
-  WrapperWithMenu,
-  ConnectedApp,
-  Theme
-};
+import Header from 'UI/Header';
+import Menu from 'UI/Menu';
+
+export { Menu, Header, Theme, PageWrapper };
+// import ConnectedApp from './ConnectedApp';
+// import SecondaryMenu from './SecondaryMenu';
+// import Theme from './Theme';
+// import ToolBarDivider from './ToolBarDivider';
+// import WrapperWithMenu from './WrapperWithMenu';
+
+// export { SecondaryMenu, ToolBarDivider, WrapperWithMenu, ConnectedApp, Theme };

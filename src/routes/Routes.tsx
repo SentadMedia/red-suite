@@ -1,11 +1,12 @@
 import { AuthRoutes, ProtectedRoutes } from 'Routes';
+import { Header, Menu, PageWrapper } from 'UI';
 import React, { Component } from 'react';
 
-import { ConnectedApp } from 'ui';
-import { LoadingPage } from 'Pages';
 import { QueryRenderer } from 'react-relay';
 import currentUserQuery from 'Routes/gql/queries/currentUser';
 import { relayEnvironment } from 'Config';
+
+// import { LoadingPage } from 'Pages';
 
 export default class NewRouter extends Component<{}> {
   render = () => {
@@ -29,9 +30,13 @@ export default class NewRouter extends Component<{}> {
             } else {
               console.error(error); // TODO dispatch server error
               return (
-                <ConnectedApp>
-                  <ProtectedRoutes />
-                </ConnectedApp>
+                <React.Fragment>
+                  <Header />
+                  <Menu />
+                  <PageWrapper>
+                    <ProtectedRoutes />
+                  </PageWrapper>
+                </React.Fragment>
               );
               // return <div>505 ERROR</div>;
             }
@@ -39,15 +44,23 @@ export default class NewRouter extends Component<{}> {
           if (!props) {
             // return <LoadingPage />;
             return (
-              <ConnectedApp>
-                <ProtectedRoutes />
-              </ConnectedApp>
+              <React.Fragment>
+                <Header />
+                <Menu />
+                <PageWrapper>
+                  <ProtectedRoutes />
+                </PageWrapper>
+              </React.Fragment>
             );
           }
           return (
-            <ConnectedApp>
-              <ProtectedRoutes />
-            </ConnectedApp>
+            <React.Fragment>
+              <Header />
+              <Menu />
+              <PageWrapper>
+                <ProtectedRoutes />
+              </PageWrapper>
+            </React.Fragment>
           );
         }}
       />

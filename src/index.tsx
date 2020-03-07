@@ -6,7 +6,7 @@ import App from 'App';
 import { LoadingPage } from 'Pages/LoadingPage';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Theme from 'ui/Theme';
+import { Theme } from 'UI';
 import { configureStore } from 'Config';
 import { createBrowserHistory } from 'history';
 

@@ -2,15 +2,15 @@ import Grid from '@material-ui/core/Grid';
 import { LoadingPage } from '.';
 import React from 'react';
 import Spinner from 'react-spinkit';
+import { Theme } from 'UI';
 import { findByTestAttr } from 'Tests';
 import { shallow } from 'enzyme';
-import theme from 'ui/Theme';
 
 describe('LoadingPage', () => {
   let loadingPage: any;
 
   beforeEach(() => {
-    loadingPage = shallow(<LoadingPage theme={theme} />);
+    loadingPage = shallow(<LoadingPage theme={Theme} />);
   });
 
   it('Should render without errors', () => {
