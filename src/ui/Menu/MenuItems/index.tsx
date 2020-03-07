@@ -1,5 +1,5 @@
-import AppMenuItem from 'UI/Menu/MenuItem';
-import Items from 'UI/Menu/MenuItems/Items';
+import AppMenuItem from '../MenuItem';
+import Items from '../MenuItems/Items';
 import List from '@material-ui/core/List';
 import React from 'react';
 

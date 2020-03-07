@@ -3,7 +3,7 @@ import { mount, shallow } from 'enzyme';
 
 import Drawer from '@material-ui/core/Drawer';
 import React from 'react';
-import { ToolBarDivider } from 'UI/Shared';
+import ToolBarDivider from '../../Shared/ToolBarDivider';
 import configureMockStore from 'redux-mock-store';
 
 const mockStore = configureMockStore();

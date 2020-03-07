@@ -1,8 +1,8 @@
 import AppBar from '@material-ui/core/AppBar';
-import HeaderLogo from 'UI/Header/HeaderLogo';
+import HeaderLogo from './HeaderLogo';
 import React from 'react';
 import { Theme } from 'UI';
-import ToggleMenuIcon from 'UI/Header/ToggleMenuIcon';
+import ToggleMenuIcon from './ToggleMenuIcon';
 import Toolbar from '@material-ui/core/Toolbar';
 
 export const Header: React.FC<{}> = () => {
