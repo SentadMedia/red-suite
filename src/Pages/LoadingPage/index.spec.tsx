@@ -1,8 +1,8 @@
 import Grid from '@material-ui/core/Grid';
-import { LoadingPage } from '.';
+import { LoadingPage } from 'Pages';
 import React from 'react';
 import Spinner from 'react-spinkit';
-import Theme from 'UI/Shared/Theme';
+import { Theme } from 'UI/Shared';
 import { findByTestAttr } from 'Tests';
 import { shallow } from 'enzyme';
 

@@ -1,5 +1,5 @@
 import AppBar from '@material-ui/core/AppBar';
-import Header from '.';
+import Header from 'UI/Header';
 import HeaderLogo from 'UI/Header/HeaderLogo';
 import React from 'react';
 import ToggleMenuIcon from 'UI/Header/ToggleMenuIcon';
