@@ -5,7 +5,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 describe('Menu', () => {
-  let wrapper;
+  let wrapper: any;
   beforeEach(() => {
     wrapper = shallow(<Menu />);
   });
