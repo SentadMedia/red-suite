@@ -29,7 +29,7 @@ module.exports = {
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$',
     '^.+\\.module\\.(css|sass|scss)$'
   ],
-  modulePaths: ['<rootDir>/src/'],
+  modulePaths: ['<rootDir>/src'],
   moduleNameMapper: {
     '^react-native$': 'react-native-web',
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
@@ -50,6 +50,6 @@ module.exports = {
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname'
   ],
-  moduleDirectories: ['node_modules', 'src'],
+  moduleDirectories: ['node_modules'],
   snapshotSerializers: ['enzyme-to-json/serializer']
 };
