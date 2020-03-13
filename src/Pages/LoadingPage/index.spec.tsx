@@ -2,7 +2,7 @@ import Grid from '@material-ui/core/Grid';
 import { LoadingPage } from '.';
 import React from 'react';
 import Spinner from 'react-spinkit';
-import Theme from '../../UI/Shared/Theme';
+import Theme from 'UI/Shared/Theme';
 import { findByTestAttr } from 'Tests';
 import { shallow } from 'enzyme';
 

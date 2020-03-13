@@ -1,13 +1,13 @@
 import AppBar from '@material-ui/core/AppBar';
 import Header from '.';
-import HeaderLogo from './HeaderLogo';
+import HeaderLogo from 'UI/Header/HeaderLogo';
 import React from 'react';
-import ToggleMenuIcon from './ToggleMenuIcon';
+import ToggleMenuIcon from 'UI/Header/ToggleMenuIcon';
 import Toolbar from '@material-ui/core/Toolbar';
 import { shallow } from 'enzyme';
 
 describe('Header', () => {
-  let wrapper;
+  let wrapper: any;
   beforeEach(() => {
     wrapper = shallow(<Header />);
   });
