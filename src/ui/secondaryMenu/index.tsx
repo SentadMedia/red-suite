@@ -64,6 +64,7 @@ const SecondaryMenu: React.FC = props => {
         })
       }}
       open={true}
+      data-testid='drawerWrapper'
     >
       <ToolBarDivider />
       <SecondaryMenuIcon />
