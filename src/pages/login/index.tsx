@@ -53,7 +53,7 @@ interface MyFormValues {
 }
 
 const mutation = graphql`
-  mutation LoginPageMutation($username: String!, $password: String!) {
+  mutation loginPageMutation($username: String!, $password: String!) {
     signIn(username: $username, password: $password)
   }
 `;

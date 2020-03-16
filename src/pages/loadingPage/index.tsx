@@ -17,13 +17,13 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({ theme }) => {
       alignItems="center"
       justify="center"
       style={{ minHeight: '100vh' }}
-      data-test="wrapperGrid"
+      data-testid="wrapperGrid"
     >
       <Grid item xs={3} data-test="innerGrid">
         <Spinner
           name="ball-grid-beat"
           color={theme.palette.primary['main']}
-          data-test="spinner"
+          data-testid="spinner"
         />
       </Grid>
     </Grid>

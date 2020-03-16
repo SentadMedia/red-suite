@@ -1,2 +1,3 @@
-export const findByTestAttr = (component: any, attr: String) =>
-  component.find(`[data-test='${attr}']`);
+export const findByTestAttr = (component: any, attr: String) => {
+  return component.find(`[data-testid="${attr}"]`);
+}
