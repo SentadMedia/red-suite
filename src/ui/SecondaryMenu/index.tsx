@@ -3,8 +3,8 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import React from 'react';
-import SecondaryMenuIcon from './SecondaryMenuIcon';
-import { ToolBarDivider } from 'UI/Shared';
+import SecondaryMenuIcon from 'ui/secondaryMenu/secondaryMenuIcon';
+import { ToolBarDivider } from 'ui/shared';
 import classNames from 'classnames';
 
 const drawerWidth = 256;

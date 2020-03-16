@@ -14,7 +14,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { relayEnvironment } from 'Config';
+import { relayEnvironment } from 'config';
 
 const useStyles = makeStyles(theme => ({
   image: {

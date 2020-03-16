@@ -1,3 +1,3 @@
-import { findByTestAttr } from 'Tests/utils';
+import { findByTestAttr } from 'tests/utils';
 
 export { findByTestAttr };

@@ -1,9 +1,9 @@
-import ConnectedMenuWrapper, { MenuWrapper } from '.';
+import ConnectedMenuWrapper, { MenuWrapper } from 'ui/menu/menuWrapper';
 import { mount, shallow } from 'enzyme';
 
 import Drawer from '@material-ui/core/Drawer';
 import React from 'react';
-import ToolBarDivider from 'UI/Shared/ToolBarDivider';
+import {ToolBarDivider} from 'ui/shared';
 import configureMockStore from 'redux-mock-store';
 
 const mockStore = configureMockStore();

@@ -3,11 +3,11 @@ import 'typeface-roboto';
 import * as serviceWorker from './serviceWorker';
 
 import App from 'App';
-import { LoadingPage } from 'Pages/LoadingPage';
+import { LoadingPage } from 'pages/loadingPage';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Theme } from 'UI';
-import { configureStore } from 'Config';
+import { Theme } from 'ui';
+import { configureStore } from 'config';
 import { createBrowserHistory } from 'history';
 
 ReactDOM.render(<LoadingPage theme={Theme} />, document.getElementById('root'));

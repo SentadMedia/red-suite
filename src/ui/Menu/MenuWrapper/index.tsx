@@ -2,7 +2,7 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 
 import Drawer from '@material-ui/core/Drawer';
 import React from 'react';
-import { ToolBarDivider } from '../../Shared';
+import { ToolBarDivider } from 'ui/shared';
 import { connect } from 'react-redux';
 
 interface MenuWrapperProps {

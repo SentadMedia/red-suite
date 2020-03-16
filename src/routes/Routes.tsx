@@ -1,12 +1,11 @@
-import { AuthRoutes, ProtectedRoutes } from 'Routes';
-import { Header, Menu, PageWrapper } from 'UI';
+import { AuthRoutes, ProtectedRoutes } from 'routes';
+import { Header, Menu, PageWrapper } from 'ui';
 import React, { Component } from 'react';
 
+import { LoadingPage } from 'pages';
 import { QueryRenderer } from 'react-relay';
-import currentUserQuery from 'Routes/gql/queries/currentUser';
-import { relayEnvironment } from 'Config';
-
-// import { LoadingPage } from 'Pages';
+import currentUserQuery from 'routes/gql/queries/currentUser';
+import { relayEnvironment } from 'config';
 
 export default class NewRouter extends Component<{}> {
   render = () => {
@@ -42,16 +41,16 @@ export default class NewRouter extends Component<{}> {
             }
           }
           if (!props) {
-            // return <LoadingPage />;
-            return (
-              <React.Fragment>
-                <Header />
-                <Menu />
-                <PageWrapper>
-                  <ProtectedRoutes />
-                </PageWrapper>
-              </React.Fragment>
-            );
+            return <LoadingPage />;
+            // return (
+            //   <React.Fragment>
+            //     <Header />
+            //     <Menu />
+            //     <PageWrapper>
+            //       <ProtectedRoutes />
+            //     </PageWrapper>
+            //   </React.Fragment>
+            // );
           }
           return (
             <React.Fragment>

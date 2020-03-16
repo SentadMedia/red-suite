@@ -1,4 +1,4 @@
-import ConnectedToggleMenuIcon, { ToggleMenuIcon } from '.';
+import ConnectedToggleMenuIcon, { ToggleMenuIcon } from 'ui/header/toggleMenuIcon';
 import { mount, shallow } from 'enzyme';
 
 import IconButton from '@material-ui/core/IconButton';

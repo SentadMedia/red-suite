@@ -1,7 +1,7 @@
-import { PageWrapper, Theme } from 'UI/Shared';
+import { PageWrapper, Theme } from 'ui/shared';
 
-import Header from 'UI/Header';
-import Menu from 'UI/Menu';
+import Header from 'ui/header';
+import Menu from 'ui/menu';
 
 export { Menu, Header, Theme, PageWrapper };
 // import ConnectedApp from './ConnectedApp';

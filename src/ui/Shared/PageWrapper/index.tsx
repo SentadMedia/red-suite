@@ -7,8 +7,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import React from 'react';
-import SecondaryMenu from 'UI/SecondaryMenu';
-import { ToolBarDivider } from 'UI/Shared';
+import SecondaryMenu from 'ui/secondaryMenu';
+import { ToolBarDivider } from 'ui/shared';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 

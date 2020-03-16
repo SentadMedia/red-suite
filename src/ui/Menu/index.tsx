@@ -1,6 +1,6 @@
-import MenuItems, { Items } from 'UI/Menu/MenuItems';
+import MenuItems, { Items } from 'ui/menu/menuItems';
 
-import MenuWrapper from 'UI/Menu/MenuWrapper';
+import MenuWrapper from 'ui/menu/menuWrapper';
 import React from 'react';
 
 const Menu: React.FC = () => {

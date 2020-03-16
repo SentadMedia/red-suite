@@ -6,8 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { History } from 'history';
 import { Provider as ReduxProvider } from 'react-redux';
-import { Routes } from 'Routes';
-import { Theme } from 'UI';
+import { Routes } from 'routes';
+import { Theme } from 'ui';
 
 export interface AppProps {
   history: History<any>;

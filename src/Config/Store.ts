@@ -1,7 +1,7 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 
 import { History } from 'history';
-import { createRootReducer } from 'Config';
+import { createRootReducer } from 'config';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import { routerMiddleware } from 'connected-react-router';
 import thunkMiddleware from 'redux-thunk';
@@ -44,8 +44,8 @@ async function configureStoreDev(history: History<any>) {
   // store.subscribe();
 
   if (module.hot) {
-    module.hot.accept('./RootReducer', () => {
-      const nextReducer = require('./RootReducer').default(history); // eslint-disable-line global-require
+    module.hot.accept('./rootReducer', () => {
+    const nextReducer = require('./rootReducer').default(history); // eslint-disable-line global-require
       store.replaceReducer(nextReducer);
     });
   }

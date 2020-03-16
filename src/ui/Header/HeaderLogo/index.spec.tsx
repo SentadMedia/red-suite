@@ -1,4 +1,4 @@
-import HeaderLogo from 'UI/Header/HeaderLogo';
+import HeaderLogo from 'ui/header/headerLogo';
 import React from 'react';
 import { shallow } from 'enzyme';
 

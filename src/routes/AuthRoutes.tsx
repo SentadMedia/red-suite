@@ -1,6 +1,6 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 
-import { LoginPage } from 'Pages';
+import { LoginPage } from 'pages';
 import React from 'react';
 
 const routes = () => {
