@@ -8,8 +8,8 @@ module.exports = {
     '!src/**/*.d.ts',
     '!src/serviceWorker.ts',
     '!src/setupTests.js',
-    '!src/**/*.ts{x}',
-    '!src/Tests/**/*',
+    // '!src/**/*.ts{x}',
+    '!src/tests/**/*',
     'src/**/*.{js,jsx,ts,tsx}'
   ],
   setupFiles: ['react-app-polyfill/jsdom'],
