@@ -28,25 +28,14 @@ function isInGitRepository() {
   }
 }
 
-function isInMercurialRepository() {
-  try {
-    execSync('hg --cwd . root', { stdio: 'ignore' });
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
 // Watch unless on CI or explicitly running all tests
-// if (
-//   !process.env.CI &&
-//   argv.indexOf('--watchAll') === -1 &&
-//   argv.indexOf('--watchAll=false') === -1
-// ) {
-//   // https://github.com/facebook/create-react-app/issues/5210
-//   const hasSourceControl = isInGitRepository() || isInMercurialRepository();
-//   argv.push(hasSourceControl ? '--watch' : '--watchAll');
-// }
-argv.push('--showConfig')
-// console.log(jest.run())
+if (
+  !process.env.CI &&
+  argv.indexOf('--watchAll') === -1 &&
+  argv.indexOf('--watchAll=false') === -1
+) {
+  argv.push(isInGitRepository() ? '--watch' : '--watchAll');
+}
+// argv.push('--showConfig')
+// argv.push('--verbose')
 jest.run(argv);
