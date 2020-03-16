@@ -1,6 +1,6 @@
 import { mount, shallow } from 'enzyme';
 
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 import { LoadingPage } from 'pages';
 import React from 'react';
 import Spinner from 'react-spinkit';
