@@ -19,7 +19,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({ theme }) => {
       style={{ minHeight: '100vh' }}
       data-testid="wrapperGrid"
     >
-      <Grid item xs={3} data-test="innerGrid">
+      <Grid item xs={3} data-testid="innerGrid">
         <Spinner
           name="ball-grid-beat"
           color={theme.palette.primary['main']}
