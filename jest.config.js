@@ -2,7 +2,7 @@ module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: [
     '!src/__generated__/**/*',
-    '!src/Config/**/*',
+    '!src/config/**/*',
     '!src/App.tsx',
     '!src/index.tsx',
     '!src/**/*.d.ts',

@@ -34,8 +34,9 @@ if (
   argv.indexOf('--watchAll') === -1 &&
   argv.indexOf('--watchAll=false') === -1
 ) {
-  argv.push(isInGitRepository() ? '--watch' : '--watchAll');
+  console.log('CI= ', process.env.CI)
+  const repository = isInGitRepository() 
+  argv.push(repository ? '--watch' : '--watchAll');
 }
-// argv.push('--showConfig')
-// argv.push('--verbose')
+
 jest.run(argv);
